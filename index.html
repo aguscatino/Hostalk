@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hostalk - Automatización para Hosts</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * { box-sizing: border-box; scroll-behavior: smooth; }
     body {
@@ -18,7 +19,7 @@
       top: 0;
       width: 100%;
       background: #1e1b3a;
-      padding: 10px 20px;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -31,11 +32,8 @@
       font-weight: bold;
     }
     header, section {
-      padding: 100px 20px;
+      padding: 120px 20px 60px;
       text-align: center;
-    }
-    header {
-      background-color: #1e1b3a;
     }
     h1, h2 {
       color: #00c9a7;
@@ -50,6 +48,10 @@
       cursor: pointer;
       font-weight: bold;
       margin-top: 20px;
+      transition: background 0.3s;
+    }
+    .cta-btn:hover {
+      background: #00b19b;
     }
     .grid {
       display: grid;
@@ -63,6 +65,10 @@
       background: #2c284a;
       padding: 20px;
       border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     form {
       background: #2b274d;
@@ -105,33 +111,33 @@
   </div>
 </nav>
 
-<header>
+<header data-aos="fade-up">
   <h1>Automatizá la comunicación con tus huéspedes</h1>
   <p>Hostalk te ayuda a gestionar mensajes, reservas y tareas sin estar pegado al celular.</p>
   <a href="#contacto"><button class="cta-btn">Empezá gratis</button></a>
 </header>
 
 <section id="features">
-  <h2>¿Qué hace Hostalk?</h2>
+  <h2 data-aos="fade-up">¿Qué hace Hostalk?</h2>
   <div class="grid">
-    <div class="card"><h3>📩 Mensajes Automáticos</h3><p>Check-ins, check-outs y respuestas frecuentes sin esfuerzo.</p></div>
-    <div class="card"><h3>📆 Calendario Integrado</h3><p>Sincronizá tus reservas y mantené todo organizado.</p></div>
-    <div class="card"><h3>📍 Recomendaciones Locales</h3><p>Compartí fácilmente los mejores lugares de tu zona.</p></div>
-    <div class="card"><h3>👤 Panel de Huéspedes</h3><p>Accedé a info clave de cada reserva en un solo lugar.</p></div>
+    <div class="card" data-aos="fade-up"><h3>📩 Mensajes Automáticos</h3><p>Check-ins, check-outs y respuestas frecuentes sin esfuerzo.</p></div>
+    <div class="card" data-aos="fade-up"><h3>📆 Calendario Integrado</h3><p>Sincronizá tus reservas y mantené todo organizado.</p></div>
+    <div class="card" data-aos="fade-up"><h3>📍 Recomendaciones Locales</h3><p>Compartí fácilmente los mejores lugares de tu zona.</p></div>
+    <div class="card" data-aos="fade-up"><h3>👤 Panel de Huéspedes</h3><p>Accedé a info clave de cada reserva en un solo lugar.</p></div>
   </div>
 </section>
 
 <section id="planes">
-  <h2>Planes</h2>
+  <h2 data-aos="fade-up">Planes</h2>
   <div class="grid">
-    <div class="card"><h3>Gratis</h3><p>✔ 1 propiedad<br>✔ Mensajes básicos<br>✔ Calendario limitado</p></div>
-    <div class="card"><h3>Premium USD 15/mes</h3><p>✔ Propiedades ilimitadas<br>✔ IA de respuestas<br>✔ Automatización total</p></div>
+    <div class="card" data-aos="fade-up"><h3>Gratis</h3><p>✔ 1 propiedad<br>✔ Mensajes básicos<br>✔ Calendario limitado</p></div>
+    <div class="card" data-aos="fade-up"><h3>Premium USD 15/mes</h3><p>✔ Propiedades ilimitadas<br>✔ IA de respuestas<br>✔ Automatización total</p></div>
   </div>
 </section>
 
 <section id="contacto">
-  <h2>Unite a la lista de espera</h2>
-  <form id="hostalk-form">
+  <h2 data-aos="fade-up">Unite a la lista de espera</h2>
+  <form id="hostalk-form" data-aos="fade-up">
     <input type="text" name="nombre" placeholder="Tu nombre" required><br>
     <input type="email" name="email" placeholder="Tu email" required><br>
     <input type="text" name="propiedades" placeholder="¿Cuántas propiedades gestionás?"><br>
@@ -144,7 +150,10 @@
   © 2025 Hostalk. Todos los derechos reservados.
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+  AOS.init();
+
   const form = document.getElementById('hostalk-form');
   const mensaje = document.getElementById('mensaje');
 
