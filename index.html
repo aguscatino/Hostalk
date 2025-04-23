@@ -3,121 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hostalk - Automatizá tu Airbnb</title>
+  <title>Hostalk - Automatización para Hosts</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #1e1b3a 0%, #4b3f72 100%);
-      color: white;
-      text-align: center;
-      padding: 0 20px;
+      background: #1e1b3a;
+      color: #fff;
     }
     header {
-      padding: 60px 0 40px;
+      background: #1e1b3a;
+      padding: 80px 20px;
+      text-align: center;
     }
     header h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
+      font-size: 2.8rem;
+      color: #00c9a7;
     }
     header p {
-      font-size: 1.2em;
-      color: #ccc;
       max-width: 600px;
-      margin: 0 auto 30px;
+      margin: 20px auto;
+      color: #ccc;
     }
-    .cta-btn {
+    .cta {
       background: #00c9a7;
-      color: black;
+      color: #1e1b3a;
       padding: 15px 30px;
       font-weight: bold;
       border: none;
       border-radius: 8px;
-      font-size: 1em;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s;
-    }
-    .cta-btn:hover {
-      background: #00b29a;
     }
     section {
-      padding: 50px 0;
+      padding: 60px 20px;
+      text-align: center;
     }
-    .features, .for {
-      max-width: 800px;
+    section h2 {
+      color: #00c9a7;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
       margin: 0 auto;
-      text-align: left;
     }
-    .features ul, .for ul {
-      list-style: none;
-      padding: 0;
+    .card {
+      background: #2c284a;
+      padding: 20px;
+      border-radius: 10px;
+      color: #fff;
     }
-    .features li, .for li {
-      margin-bottom: 15px;
-      font-size: 1.1em;
+    .card h3 {
+      color: #00c9a7;
     }
-    form {
-      margin-top: 40px;
-    }
-    input, button {
-      padding: 12px;
-      margin: 10px;
+    form input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px auto;
       border: none;
       border-radius: 6px;
-      font-size: 1em;
     }
-    input[type="text"], input[type="email"] {
-      width: 250px;
-    }
-    button[type="submit"] {
-      background-color: #00c9a7;
-      color: black;
+    form button {
+      background: #00c9a7;
+      color: #1e1b3a;
       font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
+      margin-top: 10px;
+    }
+    footer {
+      padding: 30px;
+      text-align: center;
+      color: #999;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Automatizá la comunicación con tus huéspedes.</h1>
-    <p>Con Hostalk, todo fluye solo. Respondé consultas, enviá instrucciones y hacé seguimiento sin estar pegado al celular. Gratis para tu primera propiedad.</p>
-    <button class="cta-btn">Quiero probar Hostalk</button>
+    <h1>Hostalk: Automatizá tu Airbnb</h1>
+    <p>Gestioná tus reservas, mensajes y tareas sin esfuerzo. Hostalk automatiza tu comunicación y te devuelve tiempo.</p>
+    <button class="cta">Probar gratis</button>
   </header>
 
-  <section class="features">
+  <section>
     <h2>¿Qué hace Hostalk por vos?</h2>
-    <ul>
-      <li>✅ Automatiza mensajes de bienvenida, check-in y despedida</li>
-      <li>✅ Sincroniza tu calendario con Airbnb</li>
-      <li>✅ Comparte recomendaciones locales con un clic</li>
-      <li>✅ Centraliza la info de cada huésped</li>
-      <li>✅ Te avisa si se repite una consulta</li>
-    </ul>
-  </section>
-
-  <section class="for">
-    <h2>¿Para quién es?</h2>
-    <ul>
-      <li>🏠 Hosts con 1 o más propiedades</li>
-      <li>🏢 Agencias de gestión</li>
-      <li>🛏️ Dueños que quieren dejar de responder lo mismo todos los días</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Un modelo simple y justo</h2>
-    <p><strong>Gratis para siempre</strong> con una propiedad. Pagás solo si necesitás más funciones. Sin contratos, sin complicaciones.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>📩 Mensajes Automáticos</h3>
+        <p>Programá check-ins, respuestas frecuentes y despedidas sin mover un dedo.</p>
+      </div>
+      <div class="card">
+        <h3>📆 Calendario Integrado</h3>
+        <p>Visualizá entradas y salidas en una sola vista conectada con tu cuenta de Airbnb.</p>
+      </div>
+      <div class="card">
+        <h3>👤 Panel de Huéspedes</h3>
+        <p>Accedé a la info de cada reserva, notas internas y estados de pago.</p>
+      </div>
+      <div class="card">
+        <h3>📍 Recomendaciones Locales</h3>
+        <p>Compartí tus lugares favoritos con los huéspedes de forma rápida y visual.</p>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2>Sumate a la lista de espera</h2>
+    <h2>Planes que se adaptan a vos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Plan Gratis</h3>
+        <p>✔ 1 propiedad<br>✔ Mensajes básicos<br>✔ Calendario limitado<br>✔ Soporte por mail</p>
+      </div>
+      <div class="card">
+        <h3>Premium USD 15/mes</h3>
+        <p>✔ Propiedades ilimitadas<br>✔ IA de respuestas<br>✔ Tareas automatizadas<br>✔ Prioridad en soporte</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Unite a la lista de espera</h2>
     <form>
-      <input type="text" placeholder="Nombre" required>
-      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu email" required>
       <input type="text" placeholder="¿Cuántas propiedades gestionás?">
       <button type="submit">Unirme ahora</button>
     </form>
   </section>
+
+  <footer>
+    © 2025 Hostalk. Todos los derechos reservados.
+  </footer>
 </body>
 </html>
