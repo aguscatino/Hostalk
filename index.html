@@ -1,146 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hostalk - Automatización para Hosts</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: #1e1b3a;
-      color: #fff;
+      color: white;
     }
-    header {
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
       background: #1e1b3a;
-      padding: 80px 20px;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: #00c9a7;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    header, section {
+      padding: 100px 20px;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.8rem;
+    header {
+      background-color: #1e1b3a;
+    }
+    h1, h2 {
       color: #00c9a7;
     }
-    header p {
-      max-width: 600px;
-      margin: 20px auto;
-      color: #ccc;
-    }
-    .cta {
+    .cta-btn {
       background: #00c9a7;
       color: #1e1b3a;
       padding: 15px 30px;
-      font-weight: bold;
       border: none;
       border-radius: 8px;
       font-size: 1rem;
       cursor: pointer;
-    }
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    section h2 {
-      color: #00c9a7;
-      margin-bottom: 30px;
+      font-weight: bold;
+      margin-top: 20px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
       max-width: 1000px;
       margin: 0 auto;
+      text-align: left;
     }
     .card {
       background: #2c284a;
       padding: 20px;
       border-radius: 10px;
-      color: #fff;
     }
-    .card h3 {
-      color: #00c9a7;
+    form {
+      background: #2b274d;
+      padding: 30px;
+      border-radius: 10px;
+      display: inline-block;
     }
-    form input {
-      width: 90%;
+    input {
       padding: 10px;
+      width: 90%;
       margin: 10px auto;
-      border: none;
       border-radius: 6px;
+      border: none;
     }
-    form button {
-      background: #00c9a7;
+    button {
+      background-color: #00c9a7;
       color: #1e1b3a;
       font-weight: bold;
       padding: 12px 24px;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
-      margin-top: 10px;
     }
     footer {
-      padding: 30px;
       text-align: center;
-      color: #999;
+      padding: 40px;
       font-size: 0.9em;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Hostalk: Automatizá tu Airbnb</h1>
-    <p>Gestioná tus reservas, mensajes y tareas sin esfuerzo. Hostalk automatiza tu comunicación y te devuelve tiempo.</p>
-    <button class="cta">Probar gratis</button>
-  </header>
 
-  <section>
-    <h2>¿Qué hace Hostalk por vos?</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>📩 Mensajes Automáticos</h3>
-        <p>Programá check-ins, respuestas frecuentes y despedidas sin mover un dedo.</p>
-      </div>
-      <div class="card">
-        <h3>📆 Calendario Integrado</h3>
-        <p>Visualizá entradas y salidas en una sola vista conectada con tu cuenta de Airbnb.</p>
-      </div>
-      <div class="card">
-        <h3>👤 Panel de Huéspedes</h3>
-        <p>Accedé a la info de cada reserva, notas internas y estados de pago.</p>
-      </div>
-      <div class="card">
-        <h3>📍 Recomendaciones Locales</h3>
-        <p>Compartí tus lugares favoritos con los huéspedes de forma rápida y visual.</p>
-      </div>
-    </div>
-  </section>
+<nav>
+  <div><strong>Hostalk</strong></div>
+  <div>
+    <a href="#features">Características</a>
+    <a href="#planes">Planes</a>
+    <a href="#contacto">Registrarme</a>
+  </div>
+</nav>
 
-  <section>
-    <h2>Planes que se adaptan a vos</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Plan Gratis</h3>
-        <p>✔ 1 propiedad<br>✔ Mensajes básicos<br>✔ Calendario limitado<br>✔ Soporte por mail</p>
-      </div>
-      <div class="card">
-        <h3>Premium USD 15/mes</h3>
-        <p>✔ Propiedades ilimitadas<br>✔ IA de respuestas<br>✔ Tareas automatizadas<br>✔ Prioridad en soporte</p>
-      </div>
-    </div>
-  </section>
+<header>
+  <h1>Automatizá la comunicación con tus huéspedes</h1>
+  <p>Hostalk te ayuda a gestionar mensajes, reservas y tareas sin estar pegado al celular.</p>
+  <a href="#contacto"><button class="cta-btn">Empezá gratis</button></a>
+</header>
 
-  <section>
-    <h2>Unite a la lista de espera</h2>
-    <form>
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu email" required>
-      <input type="text" placeholder="¿Cuántas propiedades gestionás?">
-      <button type="submit">Unirme ahora</button>
-    </form>
-  </section>
+<section id="features">
+  <h2>¿Qué hace Hostalk?</h2>
+  <div class="grid">
+    <div class="card"><h3>📩 Mensajes Automáticos</h3><p>Check-ins, check-outs y respuestas frecuentes sin esfuerzo.</p></div>
+    <div class="card"><h3>📆 Calendario Integrado</h3><p>Sincronizá tus reservas y mantené todo organizado.</p></div>
+    <div class="card"><h3>📍 Recomendaciones Locales</h3><p>Compartí fácilmente los mejores lugares de tu zona.</p></div>
+    <div class="card"><h3>👤 Panel de Huéspedes</h3><p>Accedé a info clave de cada reserva en un solo lugar.</p></div>
+  </div>
+</section>
 
-  <footer>
-    © 2025 Hostalk. Todos los derechos reservados.
-  </footer>
+<section id="planes">
+  <h2>Planes</h2>
+  <div class="grid">
+    <div class="card"><h3>Gratis</h3><p>✔ 1 propiedad<br>✔ Mensajes básicos<br>✔ Calendario limitado</p></div>
+    <div class="card"><h3>Premium USD 15/mes</h3><p>✔ Propiedades ilimitadas<br>✔ IA de respuestas<br>✔ Automatización total</p></div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Unite a la lista de espera</h2>
+  <form id="hostalk-form">
+    <input type="text" name="nombre" placeholder="Tu nombre" required><br>
+    <input type="email" name="email" placeholder="Tu email" required><br>
+    <input type="text" name="propiedades" placeholder="¿Cuántas propiedades gestionás?"><br>
+    <button type="submit">Enviar</button>
+    <div class="success" id="mensaje"></div>
+  </form>
+</section>
+
+<footer>
+  © 2025 Hostalk. Todos los derechos reservados.
+</footer>
+
+<script>
+  const form = document.getElementById('hostalk-form');
+  const mensaje = document.getElementById('mensaje');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const jsonData = Object.fromEntries(data.entries());
+
+    fetch("https://script.google.com/macros/s/AKfycbwg8Ph2TzQiLtftGWee8B2b_Dw0kJz3IEr4wZbVZdtIJi9BJ2E1tuNpshN-H4ixGsi-Nw/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(jsonData)
+    });
+
+    mensaje.innerText = "¡Gracias por registrarte!";
+    form.reset();
+  });
+</script>
+
 </body>
 </html>
